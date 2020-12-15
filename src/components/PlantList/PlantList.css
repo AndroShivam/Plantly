@@ -1,0 +1,37 @@
+.card {
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+    width: 350px;
+    height: 450px;
+    margin: 1rem;
+    cursor: pointer;
+    box-shadow: 0 1px 10px 1px rgba(0,0,0,0.2);
+}
+
+.info-container {
+    margin: 16px;
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+}
+
+.img {
+   width: 100%;
+   height: 80%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.text-container {
+    padding: 2px 16px;
+}
+
+.card-title {
+    padding: 16px 0;
+}

@@ -1,0 +1,42 @@
+.navbar {
+    height: 80px;
+    background-color: #25D596;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100%;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 0 24px;
+    color: white;
+}
+
+.nav-items {
+    display: flex;
+    color: white;
+    margin-right: 16px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+}
