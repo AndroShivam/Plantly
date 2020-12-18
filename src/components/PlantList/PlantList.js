@@ -11,7 +11,9 @@ const PlantList = ({plant}) => {
                                 <img className = "img" src = {p.image_url} alt = "image" />
                                 <div className = "text-container">
                                     <h1 className = "card-title">{p.common_name}</h1>
-                                    <p className = "card-desc"></p>
+                                    <small className = "card-desc"><span>Scientific Name : </span>{p.scientific_name}</small>
+                                    <small className = "card-desc"><span>Year : </span>{p.year}</small>
+                                    <small className = "card-desc"><span>Family : </span>{p.family}</small>
                                 </div>
                             </div>
                         ))}

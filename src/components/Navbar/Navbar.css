@@ -1,5 +1,5 @@
 .navbar {
-    height: 80px;
+    height: 10vh;
     background-color: #25D596;
     display: flex;
     justify-content: center;
@@ -23,7 +23,11 @@
     cursor: pointer;
     font-size: 2rem;
     margin: 0 24px;
+}
+
+.navbar-logo > a {
     color: white;
+    text-decoration: none;
 }
 
 .nav-items {

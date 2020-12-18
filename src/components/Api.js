@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import PlantList from './PlantList/PlantList';
-import Pagination from './Pagination';
+import Pagination from './Pagination/Pagination';
+import './Api.css'
 
 
 
@@ -25,7 +26,15 @@ const Api = () =>  {
             setLoading(false)
             setPlant(response.data.data)
             setNextPageURL(`https://trefle.io${response.data.links.next}&token=${ACCESS_TOKEN}`)
-            setPrevPageURL(`https://trefle.io${response.data.links.prev}&token=${ACCESS_TOKEN}`)
+
+            if(response.data.links.prev != undefined)
+                setPrevPageURL(`https://trefle.io${response.data.links.prev}&token=${ACCESS_TOKEN}`)
+            else
+                setPrevPageURL(null)
+                
+            console.log(response.data.links.prev)
+            console.log(nextPageURL)
+            console.log(prevPageURL)
         })
         .catch(error => {
             console.log(error)
@@ -36,7 +45,7 @@ const Api = () =>  {
 
 
     if(loading){
-        return <div style = {{display: "flex", justifyContent: "center", alignItems: "center",height: "100vh"}}>Loading...</div>
+        return <img className = "loading-gif" src = "https://cdn.dribbble.com/users/241278/screenshots/2438365/color-fill.gif" />
     }
 
     function gotoNextPage(){
