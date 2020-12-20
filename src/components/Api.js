@@ -12,31 +12,29 @@ const Api = () =>  {
 
     const [plant, setPlant] = useState([])
     const [loading, setLoading] = useState(true)
-    const [currentPageURL, setCurrentPageURL] = useState(`https://trefle.io/api/v1/plants?token=${ACCESS_TOKEN}`)
+    const [currentPageURL, setCurrentPageURL] = useState(`https://cors-anywhere.herokuapp.com/https://trefle.io/api/v1/plants?token=${ACCESS_TOKEN}`)
     const [nextPageURL, setNextPageURL] = useState()
     const [prevPageURL, setPrevPageURL] = useState()
 
     useEffect(() => {
         setLoading(true)
         let cancel
+
         axios.get(currentPageURL, {
             cancelToken: new axios.CancelToken(c => cancel = c)
         })
         .then(response => {
             setLoading(false)
             setPlant(response.data.data)
-            setNextPageURL(`https://trefle.io${response.data.links.next}&token=${ACCESS_TOKEN}`)
+            setNextPageURL(`https://cors-anywhere.herokuapp.com/https://trefle.io${response.data.links.next}&token=${ACCESS_TOKEN}`)
 
             if(response.data.links.prev != undefined)
-                setPrevPageURL(`https://trefle.io${response.data.links.prev}&token=${ACCESS_TOKEN}`)
+                setPrevPageURL(`https://cors-anywhere.herokuapp.com/https://trefle.io${response.data.links.prev}&token=${ACCESS_TOKEN}`)
             else
                 setPrevPageURL(null)
-                
-            console.log(response.data.links.prev)
-            console.log(nextPageURL)
-            console.log(prevPageURL)
         })
         .catch(error => {
+            setLoading(false)
             console.log(error)
         })
 

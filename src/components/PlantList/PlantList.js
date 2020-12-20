@@ -8,7 +8,7 @@ const PlantList = ({plant}) => {
                 <div className = "info-container">
                         {plant.map(p => (
                             <div key = {p.slug} className = "card">
-                                <img className = "img" src = {p.image_url} alt = "image" />
+                                <img src = {p.image_url} alt = "image" />
                                 <div className = "text-container">
                                     <h1 className = "card-title">{p.common_name}</h1>
                                     <small className = "card-desc"><span>Scientific Name : </span>{p.scientific_name}</small>

@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@font-face {
+    font-family: gordita;
+    src: url(./fonts/Gordita\ Regular.woff);
+}
 
 * {
     box-sizing: border-box;
@@ -10,5 +13,5 @@ html, body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-    font-family: 'Montserrat', sans-serif;
+    font-family: gordita, sans-serif;
 }
