@@ -11,6 +11,9 @@ Plant is a small web app that uses trefle plants API to showcase plants data.
 <img src="https://user-images.githubusercontent.com/52043419/102680949-348d7700-41e3-11eb-98df-93d475103d06.png"/>
 </p>
 
+## Check it out
+- [Hosted Version](https://plantlly.netlify.app/)
+
 ## Tech stack & Open-source libraries
 - [React](https://github.com/facebook/react/) - A declarative, efficient, and flexible JavaScript library for building user interfaces.
 - [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
